@@ -4,26 +4,37 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Select Element Example</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <main class="main">
+
+        
+        <div class="mobile">
+        <h1>Search Mobile</h1>
+    </div>
     
-    <select name="" id="brand" onchange="selectBrand()">
-        <option value="">Select Brand</option>
-    </select>
-    <div>
+    <div class="brand-box">
+        <select name="" id="brand" onchange="selectBrand()">
+            <option value="">Select Brand</option>
+        </select>
+        <select name="" id="model" onclick="selectModel()">
+            <option value="">Select model</option>
+        </select>
+    </div>
+    
+    <div class="search-box">
         <input type="text" name="" id="myInp" placeholder="Search..." >
         <button onclick="search()">Search</button>
     </div>
+    
+    <div id="specs">
+        
+    </div>
 
-<div id="specs">
-
-</div>
-
-
-
-<div id="display"></div>
-
-<script src="app.js"></script>
+</main>
+    
+    <script src="app.js"></script>
 </body>
 </html>
