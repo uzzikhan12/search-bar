@@ -153,27 +153,28 @@ function selectBrand(){
     let selectedBrand = brand.value;
     let allModel = Object.keys(mobiles[selectedBrand]);
 
-    specs.innerHTML = "";
-
-    for(i = 0; i < allModel.length; i++){
-        specs.innerHTML += `<p>${allModel[i]}</p>`
+    model.innerHTML = "";
+    for(let i = 0; i < allModel.length; i++){
+        model.innerHTML += `<option>${allModel[i]}</option>`
     }
 
 }
 
+function selectModel(){
+  let selectedModel = model.value;
+  myInp.value = selectedModel
+}
+
+
 function search(){
     let selectedModel = myInp.value;
     specs.innerHTML = "";
-    
-        
-        
+            
     let modelSpecs = Object.entries(mobiles[brand.value][selectedModel]);
     for(let i = 0; i < modelSpecs.length; i++){
         specs.innerHTML += `<p>${modelSpecs[i]}</p>`
     }
 
-        
-    myInp.value = "";
 }
 
 
